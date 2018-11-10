@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:700" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Huddle landing page with alternating sections</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,24 +15,48 @@
   </style>
 </head>
 <body>
-  Try it free
+  <header class="header wrapper">
+    <div class="logo"> <img src="./images/logo.svg"  alt="logo"></div>
+    <button class="btn">Try It Free</button> 
+  </header>
+<main>
+  <section class="title-section wrapper">
+    <h1 class="title">Build The Community Your Fans Will Love</h1>
+    <p class="description">Huddle re-imagines the way we build communities. You have a voice, but so does 
+    your audience. Create connections with your users as you engage in genuine discussion. </p>
+    <button class="btn">Get Started For Free</button>
+    <img class='screens' src='images/screen-mockups.svg' />
+  </section>
 
-  Build The Community Your Fans Will Love
+  <div class="stats wrapper">
+      <div class="stat">
+        <div class='stat-img'><img src='images/icon-communities.svg'/></div>
+        <span class='stat-number'>1.4k+</span>
+        <span class='stat-description'>Communities Formed</span>
+      </div>
+    <div class="stat">
+        <div class='stat-img'><img src='images/icon-messages.svg'/></div>
+        <span class='stat-number'>2.7m+</span>
+        <span class='stat-description'>Messages Sent</span> 
+    </div>
+  </div>
 
-  Huddle re-imagines the way we build communities. You have a voice, but so does 
-  your audience. Create connections with your users as you engage in genuine discussion. 
-
-  Get Started For Free
-
-  1.4k+
-  Communities Formed
-
-  2.7m+
-  Messages Sent
-
-  Grow Together
-  Generate meaningful discussions with your audience and build a strong, loyal community. 
-  Think of the insightful conversations you miss out on with a feedback form. 
+  <section class="section-b">
+    <div class="section-container">
+      <div class="section-content wrapper">
+        <div class="section-text">
+          <h2 class="section-title">Grow Together</h2>
+          <p>Generate meaningful discussions with your audience and build a strong, loyal community. 
+              Think of the insightful conversations you miss out on with a feedback form. </p>
+        </div>
+        <div class='illustration'>
+          <img src='images/illustration-grow-together.svg' />
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+  
 
   Flowing Conversations
   You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
