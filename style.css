@@ -22,7 +22,8 @@ button.btn {
 html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden; }
 
 body {
   font-family: 'Open Sans', sans-serif; }
@@ -111,7 +112,7 @@ div.stats {
       padding-left: 5px; }
       div.stats div.stat div.stat-img img {
         max-width: 100%; }
-    div.stats div.stat span.stat-number {
+    div.stats div.stat div.stat-number {
       font-size: 4.5em;
       font-weight: 800;
       color: #00252e;
@@ -137,6 +138,14 @@ section.section-b {
       background-size: 800px; }
       section.section-b div.section-container {
         height: 660px; } }
+  @media (max-width: 375px) {
+    section.section-b {
+      height: 700px;
+      background: url("images/bg-section-top-mobile-1.svg") top center no-repeat, url("images/bg-section-bottom-mobile-1.svg") bottom center no-repeat;
+      background-size: 375px; }
+      section.section-b div.section-container {
+        height: 550px;
+        transform: translateY(30px); } }
 
 section.section-c {
   height: 600px; }
@@ -170,28 +179,168 @@ section.section-c {
   div.section-container {
     height: 630px; } }
 section.section-d {
-  height: 800px;
+  height: 750px;
   background: url("images/bg-section-top-desktop-2.svg") top center no-repeat, url("images/bg-section-bottom-desktop-2.svg") bottom center no-repeat;
   background-size: 1920px; }
   @media (max-width: 1440px) {
     section.section-d {
       background-size: 1440px; }
       section.section-d div.section-container {
-        height: 530px; } }
+        height: 480px; } }
   @media (max-width: 800px) {
     section.section-d {
       background-size: 800px; }
       section.section-d div.section-container {
-        height: 660px; } }
+        height: 610px; } }
+  @media (max-width: 375px) {
+    section.section-d {
+      background: url("images/bg-section-top-mobile-2.svg") top center no-repeat, url("images/bg-section-bottom-mobile-2.svg") bottom center no-repeat;
+      background-size: 375px; }
+      section.section-d div.section-container {
+        height: 550px;
+        align-items: flex-start; } }
 
 section.section-e {
   height: 400px;
   display: flex;
-  flex-flow: column; }
+  flex-flow: column;
+  text-align: center; }
   section.section-e h2 {
     font-size: 2em;
     margin: 0;
     padding: 0; }
+  @media (max-width: 800px) {
+    section.section-e button.btn {
+      margin: 2em auto; } }
+  @media (max-width: 375px) {
+    section.section-e button.btn {
+      margin: 3em auto; } }
+
+.bg {
+  background: url("images/bg-footer-top-desktop.svg") top center no-repeat;
+  background-size: 1920px;
+  height: 205px;
+  width: 100vw; }
+  @media (max-width: 375px) {
+    .bg {
+      background: url("images/bg-footer-top-mobile.svg") top center no-repeat;
+      background-size: 375px;
+      height: 45px; } }
+
+footer.section-footer {
+  overflow: hidden; }
+  footer.section-footer div.section-container {
+    background: #00252e;
+    align-items: center;
+    height: 530px; }
+    footer.section-footer div.section-container div.section-content {
+      justify-content: space-between;
+      width: 100vw;
+      align-items: flex-start; }
+      footer.section-footer div.section-container div.section-content div.contact-info h3, footer.section-footer div.section-container div.section-content div.newsletter h3 {
+        margin-top: 0;
+        font-size: 1.5rem; }
+      footer.section-footer div.section-container div.section-content div.contact-info h3, footer.section-footer div.section-container div.section-content div.contact-info p, footer.section-footer div.section-container div.section-content div.newsletter h3, footer.section-footer div.section-container div.section-content div.newsletter p {
+        color: #f5faff; }
+      footer.section-footer div.section-container div.section-content div.contact-info p, footer.section-footer div.section-container div.section-content div.newsletter p {
+        width: 350px;
+        margin-bottom: 2.5em;
+        font-size: 0.9rem;
+        line-height: 1.5rem; }
+        @media (max-width: 1200px) {
+          footer.section-footer div.section-container div.section-content div.contact-info p, footer.section-footer div.section-container div.section-content div.newsletter p {
+            width: 310px; } }
+      footer.section-footer div.section-container div.section-content div.contact-info {
+        margin: 4em 6em; }
+        @media (max-width: 1200px) {
+          footer.section-footer div.section-container div.section-content div.contact-info {
+            margin: 2em 3em;
+            width: 310px; } }
+        footer.section-footer div.section-container div.section-content div.contact-info svg {
+          transform-origin: 0;
+          transform: scale(0.8); }
+        footer.section-footer div.section-container div.section-content div.contact-info p {
+          max-width: 300px; }
+        footer.section-footer div.section-container div.section-content div.contact-info .phone, footer.section-footer div.section-container div.section-content div.contact-info .email {
+          display: flex;
+          align-items: center; }
+          footer.section-footer div.section-container div.section-content div.contact-info .phone img, footer.section-footer div.section-container div.section-content div.contact-info .email img {
+            padding-right: 10px; }
+        footer.section-footer div.section-container div.section-content div.contact-info div img + p {
+          margin: 0;
+          padding: 0.5em; }
+        footer.section-footer div.section-container div.section-content div.contact-info div.social-icons {
+          margin: 3em 0; }
+          footer.section-footer div.section-container div.section-content div.contact-info div.social-icons i {
+            font-size: 2.1em;
+            color: white;
+            padding: 0.5em;
+            cursor: pointer; }
+            footer.section-footer div.section-container div.section-content div.contact-info div.social-icons i:hover {
+              transform: scale(1.1); }
+            footer.section-footer div.section-container div.section-content div.contact-info div.social-icons i:first-child {
+              padding-left: 0; }
+      footer.section-footer div.section-container div.section-content div.newsletter {
+        margin: 4em 0 4em 6em; }
+        @media (max-width: 1200px) {
+          footer.section-footer div.section-container div.section-content div.newsletter {
+            margin: 2em 3em; } }
+        @media (max-width: 800px) {
+          footer.section-footer div.section-container div.section-content div.newsletter {
+            margin: 6em 0; } }
+        footer.section-footer div.section-container div.section-content div.newsletter div.input-field {
+          width: 600px;
+          display: flex;
+          flex-wrap: wrap; }
+          @media (max-width: 1200px) {
+            footer.section-footer div.section-container div.section-content div.newsletter div.input-field {
+              width: 300px; } }
+          footer.section-footer div.section-container div.section-content div.newsletter div.input-field input.newsletter-input {
+            width: 300px;
+            border-radius: 5px;
+            padding: 1em;
+            border: 0;
+            outline: 0; }
+          footer.section-footer div.section-container div.section-content div.newsletter div.input-field button.btn-input {
+            border-radius: 50px;
+            outline: none;
+            border: 1px solid #ff52bf;
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+            border-radius: 5px;
+            padding: 0.85em 3em;
+            margin-left: 2.5em;
+            border: 0;
+            background: #ff52bf;
+            color: white;
+            font-weight: 600; }
+            footer.section-footer div.section-container div.section-content div.newsletter div.input-field button.btn-input:hover {
+              transform: scale(1.1); }
+            @media (max-width: 1200px) {
+              footer.section-footer div.section-container div.section-content div.newsletter div.input-field button.btn-input {
+                margin: 1em 0 0 auto; } }
+  @media (max-width: 1440px) {
+    footer.section-footer {
+      background-size: 1440px; }
+      footer.section-footer div.section-container {
+        height: 630px; } }
+  @media (max-width: 800px) {
+    footer.section-footer {
+      background-size: 800px; }
+      footer.section-footer div.section-container {
+        height: 770px; }
+        footer.section-footer div.section-container div.section-content {
+          flex-direction: column-reverse;
+          align-items: center;
+          justify-content: center; } }
+
+.attribution {
+  background: #00252e;
+  margin: 0;
+  color: white;
+  padding: 1em;
+  font-size: 11px;
+  text-align: center; }
 
 .page-section {
   display: flex;
